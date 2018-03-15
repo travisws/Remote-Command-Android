@@ -13,8 +13,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="102dp" />
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="102dp"
+        android:hint="Command" />
+
+    <EditText
+        android:id="@+id/IP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="46dp"
+        android:hint="IP" />
+
+    <EditText
+        android:id="@+id/Port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:hint="Port" />
 
     <Button
         android:id="@+id/button"
@@ -25,5 +44,5 @@
         android:layout_marginEnd="159dp"
         android:layout_marginTop="280dp"
         android:onClick="button"
-        android:text="Button" />
+        android:text="Send" />
 </RelativeLayout>

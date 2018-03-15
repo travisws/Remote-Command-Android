@@ -13,26 +13,23 @@ import java.net.Socket;
 
 public class MessageSender extends AsyncTask<String, Void, Void> {
 
-    Socket s;
+    public Socket s;
+    public String IP;
+    public int port;
     DataOutputStream dos;
     PrintWriter pw;
 
 
     @Override
     protected Void doInBackground(String... voids) {
-
         String message = voids[0];
         try {
-            s = new Socket("192.168.0.22", 9999);
-            System.out.println("1");
+            s = new Socket(IP, port);
             pw = new PrintWriter(s.getOutputStream());
             pw.write(message);
             pw.flush();
-            System.out.println("2");
             pw.close();
             s.close();
-            System.out.println("3");
-
         } catch (IOException e) {
             e.printStackTrace();
         }
